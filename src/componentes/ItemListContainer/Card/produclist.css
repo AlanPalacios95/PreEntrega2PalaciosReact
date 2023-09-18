@@ -1,0 +1,9 @@
+.productlist__div {
+    display: flex;
+}
+
+.btn__list {
+    width: 25%;
+    height: 2rem;
+    background: white;
+}
