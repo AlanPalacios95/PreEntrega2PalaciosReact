@@ -1,14 +1,16 @@
-import ItemList from './CardList';
+import  { useState, useEffect } from 'react';
+import ItemList from '../CardList/CardList';
 import pedirProductos from '../logicaItemListContainer';
-import { useState, useEffect } from 'react';
+import '../Productos';
 
 const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
 
     useEffect(() => {
         pedirProductos()
-            .then((res) => {
-                setProductos(res);
+            .then((data) => {
+                setProductos(data);
+                console.log(data);
             })
             .catch((error) => {
                 console.error('Error al obtener los productos:', error);
@@ -17,13 +19,12 @@ const ItemListContainer = () => {
 
     return (
         <div>
-            <ItemList key={productos.id} productos={productos} />
+            <ItemList productos={productos} />
         </div>
     );
-}
+};
 
 export default ItemListContainer;
-
 
 
 

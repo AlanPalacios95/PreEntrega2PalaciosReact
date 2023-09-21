@@ -1,7 +1,7 @@
-const Productos = () => [
+const Productos = [
     {
       id: "1",
-      type: "Playstation5",
+      category: "Playstation5",
       titulo: "God Of War Ragnarok",
       stock: 15,
       imagen: "https://images2.imgbox.com/98/45/nhD3k1d0_o.jpg",
@@ -11,7 +11,7 @@ const Productos = () => [
 
     {
       id: "2",
-      type: "Playstations5",
+      category: "Playstation5",
       titulo: "Resident Evil Remake 4",
       stock: 15,
       imagen: "https://images2.imgbox.com/fb/02/6vPZ7fT7_o.jpg",
@@ -21,7 +21,7 @@ const Productos = () => [
 
     {
       id: "3",
-      type: "Playstatiosn5",
+      category: "Playstation5",
       titulo: "Fifa 23",
       stock: 15,
       imagen: "https://images2.imgbox.com/00/d3/z29KZjMT_o.jpg",
@@ -31,7 +31,7 @@ const Productos = () => [
 
     {
       id: "4",
-      type: "Playstations5",
+      category: "Playstation5",
       titulo: "Horizon Forbiden West",
       stock: 15,
       imagen: "https://images2.imgbox.com/72/b3/WF1vEQYk_o.jpg",
@@ -41,7 +41,7 @@ const Productos = () => [
 
     {
       id: "5",
-      type: "Playstation4",
+      category: "Playstation4",
       titulo: "COD Modern Warfare II",
       stock: 15,
       imagen: "https://images2.imgbox.com/fe/59/YJi0A3uL_o.jpg",
@@ -51,7 +51,7 @@ const Productos = () => [
 
     {
       id: "6",
-      type: "Playstation4",
+      category: "Playstation4",
       stock: 15,
       titulo: "Guardians of the Galaxy",
       imagen: "https://images2.imgbox.com/df/56/JBksgQH8_o.jpg",
@@ -61,7 +61,7 @@ const Productos = () => [
 
     {
       id: "7",
-      type: "Playstation4",
+      category: "Playstation4",
       titulo: "NBA 2K2023",
       stock: 15,
       imagen: "https://images2.imgbox.com/3f/88/kvbWfoyC_o.jpg",
@@ -71,7 +71,7 @@ const Productos = () => [
 
     {
       id: "8",
-      type: "Playstation4",
+      category: "Playstation4",
       titulo: "Red Read Redemtion II",
       stock: 15,
       imagen: "https://images2.imgbox.com/8c/5c/CJOK0Kgw_o.jpg",
@@ -81,7 +81,7 @@ const Productos = () => [
 
     {
       id: "9",
-      type: "Nintendo",
+      category: "Nintendo",
       titulo: "Zelda Breath Of The Wild",
       stock: 15,
       imagen: "https://images2.imgbox.com/d7/22/6wB2Wfp1_o.jpg",
@@ -91,7 +91,7 @@ const Productos = () => [
 
     {
       id: "10",
-      type: "Nintendo",
+      category: "Nintendo",
       titulo: "Pokemon Espada",
       stock: 15,
       imagen: "https://images2.imgbox.com/0b/36/1yMtUiLS_o.jpg",
@@ -101,7 +101,7 @@ const Productos = () => [
 
     {
       id: "11",
-      type: "Nintendo",
+      category: "Nintendo",
       titulo: "Mario Bross",
       stock: 15,
       imagen: "https://images2.imgbox.com/a9/87/HH2aS9Yi_o.jpg",
@@ -111,7 +111,7 @@ const Productos = () => [
 
     {
       id: "12",
-      type: "Nintendo",
+      category: "Nintendo",
       titulo: "Monster Hunter",
       stock: 15,
       imagen: "https://images2.imgbox.com/61/4d/gPNBcibh_o.jpg",

@@ -1,5 +1,5 @@
 import './card.css';
-import useCount from '../../hook/Count.jsx';
+import useCount from '../../hook/useCount.jsx';
 function Counter() {
   const { increment, decrement, count } = useCount(0); 
 

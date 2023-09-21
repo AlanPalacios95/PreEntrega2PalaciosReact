@@ -1,4 +1,4 @@
-import './ItemListContainer.css';
+import './itemListContainer.css';
 
 function ItemListContainer(prop) {
     const { greeting } = prop;

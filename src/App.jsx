@@ -1,8 +1,8 @@
 import HeaderImg from "./componentes/home/Portada";
 import Navbar from "./componentes/nav/Navbar";
 import './componentes/nav/Navbar.css';
-import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
-import CardListContainer from '../src/componentes/ItemListContainer/Card/CardListContainer.jsx';
+import ItemListContainer from './componentes/ItemListContainer/ItemListContainer/ItemListContainer';
+import CardListContainer from './componentes/ItemListContainer/CardListContainer/CardListContainer';
 
 function App() {
 

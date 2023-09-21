@@ -1,10 +1,11 @@
 import data from './Productos';
 
-const pedirProductos = () => {
-    return new Promise((resolve, reject) => {
-        resolve(data)
-    })
-}
-
+const pedirProductos = async () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+        resolve(data); 
+    }, 2000);
+});
+};
 
 export default pedirProductos;
