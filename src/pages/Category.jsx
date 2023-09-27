@@ -16,7 +16,10 @@ const CategoryPage = () => {
         <div>
             <Navbar />
             <ProductList />
-            <h2 className="category__title">Categoría: {categoryName}</h2>
+            <div className="category">
+            <h2 className="category__title"> {categoryName}</h2>
+            <span className="category__span"> {categoryName}</span>
+            </div>
             <div className="category__grid">
                 {filteredProducts.map(product => {
                     const page = `/ItemDetails/${product.id}`;
