@@ -5,9 +5,11 @@ function ItemListContainer(prop) {
 
 
     return (
-        <div className='greeting'>
-            <span className='greeting__title'>{greeting}</span>
-            <span className='title__subtitle'>DEMENTESGAMERS</span>
+        <div>
+            <div className='greeting'>
+                <span className='greeting__title'>{greeting}</span>
+                <span className='title__subtitle'>DEMENTESGAMERS</span>
+            </div>
         </div>
     )
 }
