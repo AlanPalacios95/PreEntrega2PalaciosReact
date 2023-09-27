@@ -4,7 +4,7 @@
   padding: 16px;
   margin: 16px;
   width: 18rem;
-  height: 22rem;
+  height: 24rem;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -54,7 +54,7 @@
 .itemlist__div {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* 4 columnas con el mismo ancho */
+
   grid-gap: 20px;
 }
 

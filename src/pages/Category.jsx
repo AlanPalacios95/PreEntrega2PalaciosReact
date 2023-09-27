@@ -4,6 +4,7 @@ import Navbar from "../componentes/nav/Navbar";
 import Productos from '../componentes/ItemListContainer/Productos';
 import ProductList from '../componentes/ItemListContainer/ProductList/ProductList';
 import Counter from "../componentes/ItemListContainer/Card/Counter";
+import './CategoryStyle.css';
 
 
 const CategoryPage = () => {
@@ -15,19 +16,19 @@ const CategoryPage = () => {
         <div>
             <Navbar />
             <ProductList />
-            <h2>Categoría: {categoryName}</h2>
-            <div className="card-container">
+            <h2 className="category__title">Categoría: {categoryName}</h2>
+            <div className="category__grid">
                 {filteredProducts.map(product => {
                     const page = `/ItemDetails/${product.id}`;
                     return (
-                        <div className="card" key={product.id}>
-                            <img className="card__img" src={product.imagen} alt={product.titulo} />
-                            <h2 className='card__h2'>{product.titulo}</h2>
-                            <Link to={page}>
-                                <button>Ver detalles</button>
+                        <div className="category__item" key={product.id}>
+                            <img className="category__item-img" src={product.imagen} alt={product.titulo} />
+                            <h2 className='category__item-title'>{product.titulo}</h2>
+                            <Link to={page} className='category__item-link'>
+                                <button className='category__item-button'>Ver detalles</button>
                             </Link>
-                            <Counter />
-                            <span className='card__price'>${product.price}</span>
+                            <Counter className='category__item-counter' />
+                            <span className='category__item-price'>${product.price}</span>
                         </div>
                     );
                 })}
