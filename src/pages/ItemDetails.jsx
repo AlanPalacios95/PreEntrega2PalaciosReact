@@ -5,6 +5,7 @@ import Counter from "../componentes/ItemListContainer/Card/Counter";
 import Navbar from "../componentes/nav/Navbar";
 import "./ItemDetailsStyle.css";
 
+
 const ItemDetails = () => {
     const { id } = useParams();
     console.log(id);
