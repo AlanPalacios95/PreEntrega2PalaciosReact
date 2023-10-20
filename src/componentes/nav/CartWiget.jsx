@@ -1,14 +1,21 @@
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import './NavbarStyle.css';
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
 
-const Carrito = () => {
-    const juegos = 3;
+const CartWidget = () => {
+    const { cantidadEnCarrito } = useContext(CartContext);
+    const cantidad = cantidadEnCarrito();
+
     return (
-        <div className='cartwiger__div'>
-            <AiOutlineShoppingCart className='cartwiget__img' />
-            <span className='cartwiget__cantcart'>{juegos}</span>
-        </div>
+        <Link to="/cart">
+            <div className='cartwiger__div'>
+                <AiOutlineShoppingCart className='cartwiget__img' />
+                <span className='cartwiget__cantcart'>{cantidad}</span>
+            </div>
+        </Link>
     );
 };
 
-export default Carrito;
+export default CartWidget;

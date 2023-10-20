@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import './card.css';
-import Counter from './Counter';
+import './Item.css';
 
 const Card = ({ producto }) => {
     const page = `/ItemDetails/${producto.id}`;
@@ -12,7 +11,6 @@ const Card = ({ producto }) => {
             <Link to={page}>
                 <button>Ver detalles</button>
             </Link>
-            <Counter />
             <span className='card__price'>${producto.price}</span>
         </div>
     );

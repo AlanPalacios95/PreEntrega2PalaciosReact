@@ -71,26 +71,26 @@ a {
   color: white;
 }
 
-.cartwiget__div {
+.cartwiger__div {
   display: flex;
+  column-gap: 1rem;
   align-items: center;
 }
 
 .cartwiget__img:hover {
-  font-size: 1.9rem;
   color: rgb(10, 204, 178);
 }
 
 .cartwiget__cantcart {
-  padding: 0 1rem;
-  font-size: 1.5rem;
   color: white;
+  font-size: 2.5rem;
 }
 
-.cartwiget__cantcart:hover {
-  font-size: 3rem;
+.cartwiget__div:hover {
   color: rgb(10, 204, 178);
+  font-size: 3rem;
 }
+
 
 .list__div {
   display: flex;
@@ -103,4 +103,27 @@ a {
 
 .list__div a:hover {
   color: rgb(10, 204, 178);
+}
+
+.productlist__div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10rem;
+}
+
+.btn__list {
+  border: none;        
+  background: none;      
+  cursor: pointer;  
+  outline: none; 
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family:  Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.btn__list:hover {
+  font-size: 1.1rem;
+  color: aquamarine;
 }
