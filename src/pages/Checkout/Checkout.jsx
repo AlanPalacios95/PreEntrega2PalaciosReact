@@ -5,6 +5,7 @@ import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../../db/db';
 import NavBar from "../../componentes/nav/Navbar";
 import "./Checkout.css";
+import { serverTimestamp } from 'firebase/firestore';
 
 const Checkout = () => {
   const [pedidoId, setPedidoId] = useState("");
@@ -15,17 +16,19 @@ const Checkout = () => {
     const pedido = {
       cliente: data,
       productos: cart,
-      total: precioTotal()
-    }
+      total: precioTotal(),
+      fecha: serverTimestamp(), 
+    };
+  
     console.log(pedido);
-
+  
     const pedidosRef = collection(db, "pedidos");
-
+  
     addDoc(pedidosRef, pedido)
       .then((doc) => {
         setPedidoId(doc.id);
         vaciarCarrito();
-      })
+      });
   }
 
   if (pedidoId) {

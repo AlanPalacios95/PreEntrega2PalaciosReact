@@ -6,11 +6,9 @@ function App() {
 
   return (
     <>
-    <CartProvider>
-
-      <Navigation />
-
-      </CartProvider>
+        <CartProvider>
+          <Navigation />
+        </CartProvider>
     </>
   );
 }

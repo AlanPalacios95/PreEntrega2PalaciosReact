@@ -21,8 +21,7 @@ function Navbar() {
 
       <div className='containerCart'>
         <CartWiget />
-
-
+        
       </div>
 
     </header>

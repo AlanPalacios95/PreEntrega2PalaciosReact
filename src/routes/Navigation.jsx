@@ -32,7 +32,7 @@ const Navigation = () => {
     {
     path: "/checkout",
     element: <Checkout />,
-  },
+    },
 
   ]);
 
