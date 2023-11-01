@@ -26,6 +26,10 @@ export const CartProvider = ({children}) => {
         setCart(nuevoCarrito);
     }
 
+    const actualizarCarrito = (nuevoCarrito) => {
+        setCart(nuevoCarrito);
+      };
+
     const cantidadEnCarrito = () => {
         return cart.reduce((acc, prod) => acc + prod.cantidad, 0);
     }
@@ -42,7 +46,7 @@ export const CartProvider = ({children}) => {
         localStorage.setItem("carrito", JSON.stringify(cart));
     }, [cart])
 
-    return (<CartContext.Provider value={{cart, agregarAlCarrito, cantidadEnCarrito, precioTotal, vaciarCarrito}}>
+    return (<CartContext.Provider value={{cart, agregarAlCarrito, cantidadEnCarrito, precioTotal, vaciarCarrito, actualizarCarrito,}}>
         {children}
     </CartContext.Provider>
     )

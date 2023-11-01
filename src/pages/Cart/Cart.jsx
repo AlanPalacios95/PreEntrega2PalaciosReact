@@ -7,7 +7,12 @@ import { Link } from "react-router-dom";
 
 
 const Cart = () => {
-    const { cart, precioTotal, vaciarCarrito, } = useContext(CartContext);
+    const { cart, precioTotal, vaciarCarrito,  actualizarCarrito, } = useContext(CartContext);
+
+        const eliminarProducto = (productId) => {
+            const nuevoCarrito = cart.filter((prod) => prod.id !== productId);
+            actualizarCarrito(nuevoCarrito);
+        };
 
     const handleVaciar = () => {
         vaciarCarrito();
@@ -17,8 +22,8 @@ const Cart = () => {
         <div>
             <NavBar />
             <div className="cart__div">
-            <h2 className="cart__h2">Carrito</h2>
-            <span className="cart__span">Carrito</span>
+                <h2 className="cart__h2">Carrito</h2>
+                <span className="cart__span">Carrito</span>
             </div>
 
             {cart.map((prod) => (
@@ -27,6 +32,7 @@ const Cart = () => {
                     <h3 className="titulo-producto">{prod.titulo}</h3>
                     <p className="precio-producto">${prod.price * prod.cantidad}</p>
                     <p className="cantidad-producto">Cantidad: {prod.cantidad}</p>
+                    <button onClick={() => eliminarProducto(prod.id)} className="btn-eliminar">Eliminar</button>
                 </div>
             ))}
 
