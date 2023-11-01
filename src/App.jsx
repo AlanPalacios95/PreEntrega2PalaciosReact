@@ -1,5 +1,6 @@
 import Navigation from './routes/Navigation';
 import { CartProvider } from './context/CartContext';
+import { ToastContainer } from 'react-toastify';
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
       <CartProvider>
         <Navigation />
+        <ToastContainer />
       </CartProvider>
     </>
   );

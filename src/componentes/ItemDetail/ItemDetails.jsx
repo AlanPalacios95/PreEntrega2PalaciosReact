@@ -3,20 +3,34 @@ import "../ItemDetailContainer/ItemDetailsStyle.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { useContext, useState } from 'react';
 import { CartContext } from "../../context/CartContext";
-
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import "./ItemDetails.css";
 
 const ItemDetails = ({ item }) => {
-
-    const { cart, agregarAlCarrito } = useContext(CartContext)
+    const { cart, agregarAlCarrito } = useContext(CartContext);
 
     const [cantidad, setCantidad] = useState(1);
 
     const handleRestar = () => {
-        cantidad > 1 && setCantidad(cantidad - 1)
+        cantidad > 1 && setCantidad(cantidad - 1);
     }
 
     const handleSumar = () => {
-        cantidad < item.stock && setCantidad(cantidad + 1)
+        cantidad < item.stock && setCantidad(cantidad + 1);
+    }
+
+    const handleAgregarAlCarrito = () => {
+        agregarAlCarrito(item, cantidad);
+        mostrarNotificacion(); 
+    }
+
+    const mostrarNotificacion = () => {
+        toast.success("Producto añadido al carrito", {
+            position: "top-right",
+            autoClose: 3000, 
+            className: "custom__toast",
+        });
     }
 
     return (
@@ -32,7 +46,7 @@ const ItemDetails = ({ item }) => {
                         cantidad={cantidad}
                         handleSumar={handleSumar}
                         handleRestar={handleRestar}
-                        handleAgregar={() => { agregarAlCarrito(item, cantidad) }}
+                        handleAgregar={() => { handleAgregarAlCarrito(); }}
                     />
                 </div>
             </div>
