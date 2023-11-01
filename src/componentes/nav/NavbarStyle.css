@@ -105,7 +105,7 @@ a {
   color: rgb(10, 204, 178);
 }
 
-.productlist__div{
+.productlist__div {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -113,14 +113,14 @@ a {
 }
 
 .btn__list {
-  border: none;        
-  background: none;      
-  cursor: pointer;  
-  outline: none; 
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
   color: white;
   font-size: 1rem;
   font-weight: 600;
-  font-family:  Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .btn__list:hover {

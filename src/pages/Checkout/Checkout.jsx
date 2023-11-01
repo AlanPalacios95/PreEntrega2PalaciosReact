@@ -17,7 +17,7 @@ const Checkout = () => {
       alert("Los correos electrónicos no coinciden. Por favor, inténtalo de nuevo.");
       return;
     }
-    
+
     const pedido = {
       cliente: data,
       productos: cart,

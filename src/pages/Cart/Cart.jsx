@@ -7,12 +7,12 @@ import { Link } from "react-router-dom";
 
 
 const Cart = () => {
-    const { cart, precioTotal, vaciarCarrito,  actualizarCarrito, } = useContext(CartContext);
+    const { cart, precioTotal, vaciarCarrito, actualizarCarrito, } = useContext(CartContext);
 
-        const eliminarProducto = (productId) => {
-            const nuevoCarrito = cart.filter((prod) => prod.id !== productId);
-            actualizarCarrito(nuevoCarrito);
-        };
+    const eliminarProducto = (productId) => {
+        const nuevoCarrito = cart.filter((prod) => prod.id !== productId);
+        actualizarCarrito(nuevoCarrito);
+    };
 
     const handleVaciar = () => {
         vaciarCarrito();

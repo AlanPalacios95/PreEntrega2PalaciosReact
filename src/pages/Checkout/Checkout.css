@@ -40,7 +40,6 @@
 
 .formulario-submit {
     background-color: rgba(10, 191, 162, 1);
-    /* Color azul, puedes cambiarlo */
     color: #fff;
     padding: 10px;
     border: none;
@@ -51,7 +50,6 @@
 
 .formulario-submit:hover {
     background-color: #0056b3;
-    /* Color azul más oscuro al pasar el ratón, puedes cambiarlo */
 }
 
 .info__div {

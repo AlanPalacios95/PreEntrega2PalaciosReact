@@ -26,12 +26,12 @@ const Navigation = () => {
     {
 
       path: "/cart",
-      element: <Cart/>,
+      element: <Cart />,
     },
 
     {
-    path: "/checkout",
-    element: <Checkout />,
+      path: "/checkout",
+      element: <Checkout />,
     },
 
   ]);

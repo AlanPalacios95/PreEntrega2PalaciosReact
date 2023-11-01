@@ -7,25 +7,25 @@ import ItemDetails from "../ItemDetail/ItemDetails";
 
 const ItemDetailContainer = () => {
 
-    const [item, setItem] = useState(null);
-    const id = useParams().id;
+  const [item, setItem] = useState(null);
+  const id = useParams().id;
 
-    useEffect(() => {
+  useEffect(() => {
 
-      const docRef = doc(db, "productos", id);
-      getDoc(docRef)
-        .then((resp) => {
-          setItem(
-            { ...resp.data(), id: resp.id }
-          );
-        })
+    const docRef = doc(db, "productos", id);
+    getDoc(docRef)
+      .then((resp) => {
+        setItem(
+          { ...resp.data(), id: resp.id }
+        );
+      })
 
-    }, [id])
-    
+  }, [id])
+
 
   return (
     <div>
-        {item && <ItemDetails item={item} />}
+      {item && <ItemDetails item={item} />}
     </div>
   )
 }
