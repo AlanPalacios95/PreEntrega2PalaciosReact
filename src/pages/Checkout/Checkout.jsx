@@ -13,17 +13,22 @@ const Checkout = () => {
   const { register, handleSubmit } = useForm();
 
   const comprar = (data) => {
+    if (data.email !== data.confirmarEmail) {
+      alert("Los correos electrónicos no coinciden. Por favor, inténtalo de nuevo.");
+      return;
+    }
+    
     const pedido = {
       cliente: data,
       productos: cart,
       total: precioTotal(),
-      fecha: serverTimestamp(), 
+      fecha: serverTimestamp(),
     };
-  
+
     console.log(pedido);
-  
+
     const pedidosRef = collection(db, "pedidos");
-  
+
     addDoc(pedidosRef, pedido)
       .then((doc) => {
         setPedidoId(doc.id);
@@ -47,15 +52,17 @@ const Checkout = () => {
     <>
       <NavBar />
       <div className="info__div">
-      <h2 className="info__h2">Datos Personales</h2>
-      <span className="info__span">Datos Personales</span>
+        <h2 className="info__h2">Datos Personales</h2>
+        <span className="info__span">Datos Personales</span>
 
       </div>
       <div className="container">
         <h3 className="main-title">Ingrese sus datos</h3>
         <form className="formulario" onSubmit={handleSubmit(comprar)}>
           <input type="text" className="formulario-input" placeholder="Ingresá tu nombre" {...register("nombre")} />
+          <input type="text" className="formulario-input" placeholder="Ingresá tu apellido" {...register("apellido")} />
           <input type="email" className="formulario-input" placeholder="Ingresá tu e-mail" {...register("email")} />
+          <input type="email" className="formulario-input" placeholder="Confirma tu correo electrónico" {...register("confirmarEmail")} />
           <input type="tel" className="formulario-input" placeholder="Ingresá tu teléfono" {...register("telefono")} />
           <button className="formulario-submit" type="submit">Comprar</button>
         </form>
