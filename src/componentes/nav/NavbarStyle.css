@@ -13,18 +13,8 @@ header {
   padding: 0 1rem;
 }
 
-.containerBrand {
-  width: 20%;
-  height: 100%;
-}
-
 .brand__img {
   height: 56px;
-}
-
-.containerList {
-  width: 60%;
-  height: 100%;
 }
 
 .containerItemList {
@@ -109,7 +99,7 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10rem;
+  gap: 7rem;
 }
 
 .btn__list {
@@ -137,3 +127,92 @@ a {
   gap: 1rem;
   font-size: 1.5rem;
 }
+
+.btn__logo {
+  color: white;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.btn__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*/////////// Computadoras Portátiles y Monitores /////////*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .productlist__div {
+    gap: 3rem;
+  }
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////
+//////////////////// Estilos para tabletas ///////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  header {
+    padding: 0.5rem;
+  }
+
+  .productlist__div {
+    gap: 3rem;
+
+  }
+
+  .cartwiger__div {
+    column-gap: 0.5rem;
+  }
+
+  .btn__link {
+    gap: 0.2rem;
+  }
+
+  .btn__logo {
+    font-size: 2rem;
+  }
+
+  .btn__list {
+    font-size: 0.5rem;
+    font-weight: 100;
+  }
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////// Mobiles  ///////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////*/
+
+@media (max-width: 599px) {
+    header {
+      padding: 0.5rem;
+    }
+  
+    .productlist__div {
+      gap: 3rem;
+  
+    }
+  
+    .cartwiger__div {
+      column-gap: 0.5rem;
+    }
+  
+    .btn__link {
+      gap: 0.2rem;
+    }
+  
+    .btn__logo {
+      font-size: 2rem;
+    }
+  
+    .btn__list {
+      font-size: 0.5rem;
+      font-weight: 100;
+    }
+  }
+

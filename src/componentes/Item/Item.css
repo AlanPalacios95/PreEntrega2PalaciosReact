@@ -2,19 +2,17 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
-  margin: 16px;
+  margin: 16px auto;
   width: 18rem;
   height: 24rem;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
 .card-title {
   font-size: 1.5rem;
   margin-bottom: 8px;
 }
-
 
 .card-content {
   font-size: 1rem;
@@ -54,7 +52,6 @@
 .itemlist__div {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
   grid-gap: 20px;
 }
 
@@ -62,4 +59,36 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*/////////// Computadoras Portátiles y Monitores /////////*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .itemlist__div {
+    grid-template-columns: repeat(3 , 1fr);
+  }
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////
+//////////////////// Estilos para tabletas ///////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .itemlist__div {
+    grid-template-columns: repeat(2 , 1fr);
+  }
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////////
+//////////////////// Mobiles  ///////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////*/
+
+@media (max-width: 599px) {
+  .itemlist__div {
+    grid-template-columns: repeat(1 , 1fr);
+  }
 }
